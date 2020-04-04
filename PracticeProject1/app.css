@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+body {
+	margin: 20px;
+	font-size: 16px;
+	font-family: Quicksand, Arial, Helvetica, sans-serif;
+	line-height: 1.75;
+}
+h1 {
+	margin: 0;
+	font-weight: 600;
+}
+.form-container {
+	border: 1px solid #b9b9b9;
+	border-radius: 10px;
+	max-width: 550px;
+	margin: auto;
+	padding: 10px;
+
+	max-width: 500px;
+	background-color: #fdfdfd;
+}
+form {
+	justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+}
+.form-item {
+	display: flex;
+	flex-direction: row;
+}
+.form-item-consent {
+	display: flex;
+	flex-direction: column;
+}
+label {
+	width: 300px;
+}
+fieldset {
+	border: none;
+	padding: none;
+}
+.form-description {
+	font-size: 1.2em;
+}
+.form-label {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+input {
+	height: 2.5em;
+	border-radius: 5px;
+	width: 200px;
+}
+#consentLabel {
+	font-size: 1em;
+	max-width: 450px;
+}
+#emailConsent {
+	width: 20px;
+}
+button {
+	margin: 20px auto 0;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: rgb(55, 156, 55);
+	color: #fff;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgb(49, 139, 49);
+}
+.form-error {
+	margin: 0 auto;
+	color: rgb(197, 74, 74);
+}
+.hidden {
+	display: none;
+}

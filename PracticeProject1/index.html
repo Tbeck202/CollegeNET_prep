@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collegeNET Practice Project 1</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="/someroute" method="post" class="form">
+            <h1>Sign up!</h1>
+            <p class="form-description">
+                We just need a little information to set up your account.<br> We'll never sell your information to anyone.
+            </p>
+            <!-- Name============================================ -->
+            <div class="form-item">
+                <label for="fName" class="form-label">First Name</label>
+                <input type="text" class="form-name-input" id="fName" placeholder="Enter your first name">
+            </div>
+            <div class="form-item">
+                <label for="lName" class="form-label">Last Name</label>
+                <input type="text" class="form-name-input" id="lName" placeholder="Enter your last name">
+            </div>
+            <!-- Email============================================ -->
+            <div class="form-item">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="What is your email address?">
+            </div>
+            <!-- Birthday============================================ -->
+            <div class="form-item">
+                <label for="age" class="form-label">What is your birthday?</label>
+                <input type="date" name="age" id="age" class="form-age-input">
+            </div>
+            <!-- Userame============================================ -->
+            <div class="form-item">
+                <label for="username" class="form-label">Pick a username</label>
+                <input type="text" name="username" id="username" class="form-username-input">
+            </div>
+            <!-- Password============================================ -->
+            <div class="form-item">
+                <label for="password" class="form-label">Enter your password</label>
+                <input type="password" name="password" id="password" class="form-password-input" placeholder="Min 6 characters">
+            </div>
+            <div class="form-item">
+                <p class="form-error hidden" id="password-error">Password must be more than six characters!</p>
+            </div>
+            <div class="form-item">
+                <label for="passwordConfirm" class="form-label">Confirm your password</label>
+                <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-password-input" placeholder="Please re-enter your password">
+            </div>
+            <div class="form-item">
+                <p class="form-error hidden" id="password-validate-error">Your password does not match</p>
+            </div>
+            <!-- Email consent============================================ -->
+            
+            <div class="form-item-consent">
+                <label for="emailConsent" class="form-label" id="consentLabel">Check the box below if you're okay with getting an email from us every now and then.</label>
+                <input type="checkbox" name="emailConsent" id="emailConsent" value="yes">
+            </div>
+            <button type="submit">Submit!</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
