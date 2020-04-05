@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Form 2</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <form action="index.html" method="post" class="form">
+        <div class="form-title">Place your order</div>
+        <p class="form-desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero hic distinctio quia ducimus dolores quas deserunt consequatur rerum delectus quisquam quibusdam similique nemo explicabo laborum, assumenda eius est ex id?
+        </p>
+        <div class="form-item">
+            <label for="name" class="form-label">What's your name?</label>
+            <input type="text" name="name" class="form-input" id="name" placeholder="Please enter your name">
+            <span class="form-error" id="name-error">error!</span>
+        </div>
+        <div class="form-item">
+            <label for="numitems" class="form-label">Number of items</label>
+            <input type="number" name="numitems" class="form-input form-input-small" id="numitems" placeholder="Maximum 5 items">
+            <span class="form-error" id="item-error">error!</span>
+        </div>
+        <div class="form-item">
+            <label for="deliveryDate" class="form-label">Delivery Date</label>
+            <input type="date" name="deliveryDate" class="form-input form-input-small" id="deliveryDate" placeholder="Enter a delivery date">
+            <span class="form-error">error!</span>
+        </div>
+        <div class="form-item">
+            <label for="expiryDate" class="form-label">Special instructions</label>
+            <textarea maxlength="500" name="message" id="message" class="form-input" placeholder="Please let us know if you have any special instructions (Maximum 500 characters)"></textarea>
+            <span class="form-error">error!</span>
+        </div>
+        <div class="form-item">
+            <button class="form-btn" type="submit">Submit!</button>
+        </div>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
