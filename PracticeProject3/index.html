@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice form 3</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-item"><h1 class="page-header">Welcome!</h1></div>
+        <form class="form" action="./" method="post">
+            <!-- NAME STEP====================================== -->
+            <div class="step">
+                <div class="form-item">
+
+                    <p class="head-text">Tell us your name</p>
+
+                    <label for="fname" class="form-label">First name</label>
+                    <input type="text" name="fname" id="fname" class="form-input">
+                    <span class="error hidden">Field cannot be empty!</span>
+
+                    <label for="lname" class="form-label">Last name</label>
+                    <input type="text" name="lname" id="lname" class="form-input">
+                    <span class="error hidden">Field cannot be empty!</span>
+
+                    <button class="btn-next" id="name-btn">Next</button>
+                </div>
+            </div>
+            <!-- CREATE LOGIN STEP====================================== -->
+            <div class="step hidden">
+                <div class="form-item">
+
+                    <p class="head-text">Create your login</p>
+
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" id="username" class="form-input" placeholder="What should we call you?">
+                    <span class="error hidden" id="usr-name-err">Field cannot be empty!</span>
+                    
+
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-input" placeholder="min six characters">
+                    <span class="error pw hidden" id="pwerror">Password must be more than six characters!</span>
+
+                    <label for="verifyPassword" class="form-label">Verify Password</label>
+                    <input type="password" name="verifyPassword" id="verifyPassword" class="form-input" placeholder="re-enter your password">
+                    <span class="error hidden"></span>
+
+                    <button class="btn-next" id="pw-validate">Next</button>
+                </div>
+            </div>
+            <!-- CHOOSE SUBSCRITION STEP====================================== -->
+            <div class="step hidden">
+                <div class="form-item">
+
+                    <p class="head-text">Choose your subscription</p>
+
+                    <div class="form-radio">
+                        <label for="trial" class="form-label">Trial</label>
+                        <input type="radio" name="subscription" id="trial" class="radio" value="0">
+                    </div>
+                    <p class="sub-info">One month limited use free trial.</p>
+
+                    <div class="form-radio">
+                        <label for="basic" class="form-label">Basic</label>
+                        <input type="radio" name="subscription" id="basic" class="radio" value="10">
+                    </div>
+                    <p class="sub-info">Limited access subscription billed at $10 monthly.</p>
+
+                    <div class="form-radio">
+                        <label for="plus" class="form-label">Basic +</label>
+                        <input type="radio" name="subscription" id="basic-plus" class="radio" value="15">
+                    </div>
+                    <p class="sub-info">All access subscription billed at $15 monthly.</p>
+
+                    <div class="form-radio">
+                        <label for="plus" class="form-label">Annual</label>
+                        <input type="radio" name="subscription" id="annual" class="radio" value="100">
+                    </div>
+                    <p class="sub-info">Limited access subscription billed at $100 annually.</p>
+
+                    <div class="form-radio">
+                        <label for="plus" class="form-label">Annual +</label>
+                        <input type="radio" name="subscription" id="annual-plus" class="radio" value="150" checked>
+                    </div>
+                    <p class="sub-info">All access subscription billed at $150 annually.</p>
+                    <button class="btn-next" id="subscription-btn-next">Next</button>
+                </div>
+            </div>
+            <!-- VERIFY INFO STEP====================================== -->
+            <div class="step verify hidden">
+                <p class="head-text">Verify your info</p>
+                <div class="form-item">
+                    <div class="display-data">
+                        <p class="data-label">Name:</p>
+                        <p class="data-content" id="name-display">Sample Sample</p>
+                    </div>
+                    <div class="display-data">
+                        <p class="data-label">Username:</p>
+                        <p class="data-content" id="username-display">Sample</p>
+                    </div>
+                    <div class="display-data">
+                        <p class="data-label">Subscription:</p>
+                        <p class="data-content" id="subscription-display">Sample</p>
+                    </div>
+                </div>
+            </div>
+            <!-- BUTTONS====================================== -->
+            <div class="form-item">
+                <button type="submit" id="btn-submit" class="hidden">Submit!</button>
+                <!-- <button id="btn-next">Next</button> -->
+                <button id="btn-back" class="hidden">Back</button>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

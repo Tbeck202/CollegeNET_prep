@@ -1,0 +1,80 @@
+body {
+	margin: 0;
+	padding: 10px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+		sans-serif;
+	font-size: 16px;
+}
+.page-header {
+	margin: auto;
+}
+.form {
+	width: 80%;
+	max-width: 400px;
+	margin: auto;
+	padding-bottom: 20px;
+	line-height: 1.5;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+.hidden {
+	display: none;
+}
+.form-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.head-text {
+	font-size: 1.5em;
+	margin: 10px;
+	width: 90%;
+	max-width: 400px;
+	text-align: center;
+}
+.form-input {
+	width: 100%;
+	max-width: 150px;
+	height: 20px;
+	outline: none;
+}
+.form-input::placeholder {
+	text-align: center;
+}
+.error {
+	color: red;
+}
+.pw-err {
+	background-color: rgba(199, 86, 86, 0.753);
+}
+.form-radio {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.form-radio > .form-label {
+	font-size: 1.2em;
+}
+.radio {
+	margin: 0px 0px 0px 20px;
+}
+.sub-info {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 400px;
+	text-align: center;
+}
+.display-data {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.display-data > p {
+	margin: 5px 2.5px;
+}
+.data-label {
+	font-weight: 600;
+}
+button {
+	margin: 20px auto 0px;
+}
