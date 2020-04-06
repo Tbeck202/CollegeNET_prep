@@ -8,6 +8,11 @@ body {
 .page-header {
 	margin: auto;
 }
+.sub-header {
+	width: 350px;
+	margin: 5px auto;
+	text-align: center;
+}
 .form {
 	width: 80%;
 	max-width: 400px;
@@ -18,6 +23,13 @@ body {
 	border: 1px solid black;
 	border-radius: 10px;
 }
+/* .step {
+	opacity: 1;
+	transition: opacity 500ms;
+}
+.step.fade-out {
+	opacity: 0;
+} */
 .hidden {
 	display: none;
 }
@@ -69,6 +81,7 @@ body {
 	width: 90%;
 	max-width: 400px;
 	text-align: center;
+	color: mediumturquoise;
 }
 .display-data {
 	display: flex;

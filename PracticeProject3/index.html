@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-item"><h1 class="page-header">Welcome!</h1></div>
+        <div class="form-item">
+            <h1 class="page-header">Welcome!</h1>
+            <p class="sub-header">We just need a little more information to set up your subscription</p>
+        </div>
         <form class="form" action="./" method="post">
             <!-- NAME STEP====================================== -->
             <div class="step">
@@ -59,25 +62,25 @@
                         <label for="trial" class="form-label">Trial</label>
                         <input type="radio" name="subscription" id="trial" class="radio" value="0">
                     </div>
-                    <p class="sub-info">One month limited use free trial.</p>
+                    <p class="sub-info hidden">One month limited use free trial.</p>
 
                     <div class="form-radio">
                         <label for="basic" class="form-label">Basic</label>
                         <input type="radio" name="subscription" id="basic" class="radio" value="10">
                     </div>
-                    <p class="sub-info">Limited access subscription billed at $10 monthly.</p>
+                    <p class="sub-info hidden">Limited access subscription billed at $10 monthly.</p>
 
                     <div class="form-radio">
                         <label for="plus" class="form-label">Basic +</label>
                         <input type="radio" name="subscription" id="basic-plus" class="radio" value="15">
                     </div>
-                    <p class="sub-info">All access subscription billed at $15 monthly.</p>
+                    <p class="sub-info hidden">All access subscription billed at $15 monthly.</p>
 
                     <div class="form-radio">
                         <label for="plus" class="form-label">Annual</label>
                         <input type="radio" name="subscription" id="annual" class="radio" value="100">
                     </div>
-                    <p class="sub-info">Limited access subscription billed at $100 annually.</p>
+                    <p class="sub-info hidden">Limited access subscription billed at $100 annually.</p>
 
                     <div class="form-radio">
                         <label for="plus" class="form-label">Annual +</label>
@@ -93,15 +96,15 @@
                 <div class="form-item">
                     <div class="display-data">
                         <p class="data-label">Name:</p>
-                        <p class="data-content" id="name-display">Sample Sample</p>
+                        <p class="data-content" id="name-display"></p>
                     </div>
                     <div class="display-data">
                         <p class="data-label">Username:</p>
-                        <p class="data-content" id="username-display">Sample</p>
+                        <p class="data-content" id="username-display"></p>
                     </div>
                     <div class="display-data">
                         <p class="data-label">Subscription:</p>
-                        <p class="data-content" id="subscription-display">Sample</p>
+                        <p class="data-content" id="subscription-display"></p>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ const pwError = document.querySelector('#pwerror');
 const pwValErr = document.querySelector('#pw-val-err');
 const radios = document.querySelectorAll('.radio');
 const subscriptionNextBtn = document.querySelector('#subscription-btn-next');
+const subInfo = document.querySelectorAll('.sub-info');
 const btns = document.querySelectorAll('button');
 const nameDisplay = document.querySelector('#name-display');
 const usernameDisplay = document.querySelector('#username-display');
@@ -91,17 +92,43 @@ const validPw = () => {
 	}
 };
 //SUBSCRIPTION LOGIC==================================================
-radios.forEach((radio) => {
+radios.forEach((radio, idx) => {
 	radio.addEventListener('change', () => {
-		// let selctedSub = document.querySelector('input[name="subscription"]:checked').value;
-		// subscription = selctedSub;
-		subscription = document.querySelector('input[name="subscription"]:checked').value;
+		let selectedSub = document.querySelector('input[name="subscription"]:checked').value;
+		let info = subInfo[idx];
+		subscription = selectedSub;
+		showSubInfo(idx);
 	});
 });
+
+const showSubInfo = (checkidx) => {
+	subInfo.forEach((display, idx) => {
+		display.classList.add('hidden');
+		if (idx === checkidx) {
+			display.classList.toggle('hidden');
+		}
+	});
+};
 
 subscriptionNextBtn.addEventListener('click', () => {
 	let subscription = document.querySelector('input[name="subscription"]:checked').value;
 	nameDisplay.innerHTML = `${fname.value} ${lname.value}`;
-	usernameDisplay.innerHTML = `${username.value}`;
-	subscriptionDisplay.innerHTML = `$${subscription}`;
+	// usernameDisplay.innerHTML = `${username.value}`;
+	// let billing = getBillingCycle();
+	subscriptionDisplay.innerHTML = `$${subscription} ${getBillingCycle(subscription)}`;
 });
+
+const getBillingCycle = (sub) => {
+	console.log(sub);
+	let billingCycle = '';
+	if (sub < 1) {
+		billingCycle = 'for one month';
+	} else if (sub < 100 && sub > 1) {
+		billingCycle = 'monthly';
+	} else if (sub > 99) {
+		billingCycle = 'annually';
+	}
+	return billingCycle;
+};
+
+//FADE LOGIC
