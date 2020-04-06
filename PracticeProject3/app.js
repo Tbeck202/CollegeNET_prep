@@ -8,13 +8,13 @@ const pw = document.querySelector('#password');
 const pwValidate = document.querySelector('#verifyPassword');
 const pwNextBtn = document.querySelector('#pw-validate');
 const pwError = document.querySelector('#pwerror');
+const pwValErr = document.querySelector('#pw-val-err');
 const radios = document.querySelectorAll('.radio');
 const subscriptionNextBtn = document.querySelector('#subscription-btn-next');
 const btns = document.querySelectorAll('button');
 const nameDisplay = document.querySelector('#name-display');
 const usernameDisplay = document.querySelector('#username-display');
 const subscriptionDisplay = document.querySelector('#subscription-display');
-let subscription = document.querySelector('input[name="subscription"]:checked').value;
 const btnNext = document.querySelectorAll('.btn-next');
 const btnBack = document.querySelector('#btn-back');
 const btnSubmit = document.querySelector('#btn-submit');
@@ -67,24 +67,40 @@ pw.addEventListener('keyup', () => {
 	} else {
 		pw.classList.remove('pw-err');
 	}
-	validPw();
+	// validPw();
 	pwNextBtn.disabled = true;
 });
 
 pwValidate.addEventListener('keyup', () => {
-	validPw();
+	if (validPw() === false) {
+		pwNextBtn.disabled = true;
+		pwValidate.classList.add('pw-err');
+	} else if (validPw() === true) {
+		pwNextBtn.disabled = false;
+		pwValidate.classList.remove('pw-err');
+	}
 });
 
 const validPw = () => {
 	if (pw.value !== pwValidate.value || pw.value.length < 6) {
-		pwNextBtn.disabled = true;
+		// pwNextBtn.disabled = true;
+		return false;
 	} else {
-		pwNextBtn.disabled = false;
+		// pwNextBtn.disabled = false;
+		return true;
 	}
 };
+//SUBSCRIPTION LOGIC==================================================
+radios.forEach((radio) => {
+	radio.addEventListener('change', () => {
+		// let selctedSub = document.querySelector('input[name="subscription"]:checked').value;
+		// subscription = selctedSub;
+		subscription = document.querySelector('input[name="subscription"]:checked').value;
+	});
+});
 
 subscriptionNextBtn.addEventListener('click', () => {
-	// getSubscription();
+	let subscription = document.querySelector('input[name="subscription"]:checked').value;
 	nameDisplay.innerHTML = `${fname.value} ${lname.value}`;
 	usernameDisplay.innerHTML = `${username.value}`;
 	subscriptionDisplay.innerHTML = `$${subscription}`;
